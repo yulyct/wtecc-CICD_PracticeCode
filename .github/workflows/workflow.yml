@@ -13,7 +13,7 @@ jobs :
     container : python:3.9-slim
     steps : 
       - name : Checkout 
-        uses : actions/checkout@v3
+        uses : actions/checkout@v4
 
       - name : Install dependencies 
         run : |
@@ -28,8 +28,8 @@ jobs :
       - name : Run unit test with nose
         run : | 
           nosetests -v --with-spec --spec-color --with-coverage --cover-package=app
-          
-             
+
+
 
           
               
